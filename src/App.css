@@ -1,0 +1,269 @@
+body {
+  background-color: #232323;
+  font-family: 'Alegreya Sans SC';
+  margin: 0;
+}
+
+body p {
+font-family: 'Alegreya Sans';
+}
+
+h1 {
+font-size: 50px;
+color: white;
+text-shadow: 1px 1px 5px #0c59cf;
+float:left;
+margin:0;
+padding-right:50px;
+}
+
+h2 {
+font-size: 40px;
+color: white;
+text-shadow: 1px 1px 5px black;
+}
+
+/*hr needs different attributes set to black for diff browsers to appear correctly*/
+hr {
+color: black;
+border-color: black;
+background-color: black;
+height: 1.5px;
+border: 0;
+}
+
+/*HEADER FOR EACH PAGE
+.
+.
+.
+.*/
+/* code for the topnav starts here*/
+.topnav {
+  background-color: #232323;
+  overflow: hidden;
+  list-style-type: none;
+  position: sticky;
+  border-bottom: solid 2px black;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a:not(.cartlink) {
+  float: left;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 36px;
+  text-decoration: none;
+  font-size: 17px;
+  border:  1px solid black;
+  margin-top: 10px;
+  border-bottom: 0px;
+}
+
+.topnav a:not(.cartlink):hover { /*the not(.cart) part here is to exclude the cart link from this styling*/
+  box-shadow: inset 0 0 12px white;
+  text-shadow: 1px 1px 10px white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a:not(.cartlink).active {
+ color: black;
+ background-image: linear-gradient(#444444, #777777);
+}
+
+/* makes an element go all jaggedy just thought it was cool to keep
+border: solid black;
+border-width: 0 3px 3px 0;
+display: inline-block;
+padding: 3px;
+transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+*/
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+} 
+
+/* for responsive layout */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav h1 {
+    float: none;
+    width: 70%;
+    margin: auto;
+  }
+}
+
+/*styling the signup and login buttons in topnav*/
+.topButton {
+  margin-left: 4%;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  background-color: #444444;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px black;
+  font-family: 'Alegreya Sans SC';
+}
+
+.topButton:hover {background-color: #313131}
+
+.topButton:active {
+  background-color: #444444;
+  box-shadow: 0 5px 10px #000;
+  transform: translateY(4px);
+}
+
+.topnav img {
+  margin-left:30px;
+  margin-top: -10px;
+  margin-bottom: -15px;
+}
+
+.cart {
+  display: inline-block;
+  color: white;
+}
+.cartimg {
+  width:40px;
+  height:40px;
+  transform:scaleX(-1);
+}
+
+
+/*LOGIN POPUP*/
+#triangleDiv{
+display:none;
+width: 300px;
+height: 250px;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: -25px;
+margin-left: 65%;
+filter: drop-shadow(2px 2px 5px black);
+}
+/*makes the login popup position itself better on resize*/
+@media screen and (max-width:600px) {
+#triangleDiv {
+  margin:auto;
+}
+}
+
+#triangle{
+  width: 0px;
+  height: 0px;
+  border: 20px solid black;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  margin-left: 150px;
+      
+}
+#box{
+  width: 300px;
+  height: 250px;
+  background: #444444;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#formAlign{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#loginForm{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#username{
+  margin-bottom: 30px;
+  height: 30px;
+  width: 210px;
+  border: transparent;
+  color: white;
+  background: #343434;
+  padding-left: 15px;
+  font-family: 'Alegreya Sans';
+  border: 1px solid black;
+}
+#password{
+  height: 30px;
+  width: 210px;
+  background: #343434;
+  border: transparent;
+  color: white;
+  padding-left: 15px;
+  font-family: 'Alegreya Sans';
+  border: 1px solid black;
+}
+#username, #password{
+  outline: none;
+}
+
+#loginFormBtn{
+  margin-top: 30px;
+  height: 35px;
+  width: 75px;
+  border: 1px solid BLACK;
+  filter: drop-shadow(1px 1px 5px black);
+  background: #444444;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Alegreya Sans SC';
+  font-size: 15px;
+}
+/*END OF LOGIN
+.
+.
+.
+END OF HEADER*/
+
+/* Create three equal columns that floats next to each other */
+.column {
+float: left;
+text-align: center;
+filter: drop-shadow(1px 1px 5px black);
+}
+
+.column.middle {
+width: 20%;
+text-align: center;
+border: 1px solid black;
+background-image: url(https://i.pinimg.com/originals/2e/c0/83/2ec083fa7d50195e26085d751c2ec0f2.jpg);
+padding-left: 10px;
+padding-right: 10px;
+margin-top: 50px;
+filter: drop-shadow(1px 1px 5px black);
+}
+.column.side {
+width: 37.5%;
+text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 1000px) {
+.column.side, .column.middle {
+  width: 100%;
+} 
+}
